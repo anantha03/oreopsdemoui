@@ -1,0 +1,31 @@
+<!-- <app-alert-modal  [message]="'user created Successfully!'" *ngIf="success"></app-alert-modal>
+<app-alert-modal  [message]="'Email already exists!'" *ngIf="failure" ></app-alert-modal> -->
+<div class="container-fluid">
+    <!-- <app-alert-modal [message]="user created Successfully!" *ngif="success"></app-alert-modal> -->
+    <h2>Sign-up</h2>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            
+            <label>Username</label>
+            <input  [class.is-invalid]="registerForm.get('userName')?.invalid && registerForm.get('userName')?.touched" formControlName='userName' placeholder="enter username" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input [class.is-invalid]="registerForm.get('email')?.invalid && registerForm.get('email')?.touched" class="form-control" formControlName='email' placeholder="enter email">
+        </div>
+       
+        <div class="form-group">
+            <label>Password</label>
+            <input formControlName="password" placeholder="enter password" type="password" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Confirm Password</label> 
+                <input formControlName="confirmPassword" placeholder="enter password" type="password" class="form-control">
+                </div>
+    <br>
+        <button class="btn btn-primary" type="submit">Sign-up</button>
+    
+    </form>
+    
+    <!-- {{registerForm.value| json}} -->
+    </div>

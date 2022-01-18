@@ -1,0 +1,26 @@
+<html>
+<div class="loginbox">
+
+  <div class="main">
+    <h2>Login</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>Username:</label><br>
+        <input formControlName="userName" style="height:50px;width:500px" placeholder="Enter username" type="text"
+          class="form-control">
+      </div>
+      <div class="form-group">
+        <br><label>Password:</label><br>
+        <input formControlName="password" style="height:50px;width:500px" placeholder="Enter password" type="password"
+          class="form-control">
+      </div>
+      <br>
+      <button class="btn btn-primary" type="submit">Login</button>
+
+    </form>
+
+  </div>
+
+</div>
+
+</html>
