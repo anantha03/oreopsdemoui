@@ -27,9 +27,9 @@ export class LoginComponent implements OnInit {
   }
   onResponse(response: any) {
     console.log(response)
-    this.router.navigateByUrl("/landing-page")
+   
     if (response.statusData == "success") {
-      
+      this.router.navigateByUrl("/landing-page")
    
       this.service.loginBool = false;
       this.service.IsloginBool = true;
@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
       this.router.navigateByUrl("/landing-page")
     }
     else {
-      
+      alert("Invalid Credentials")
     }
 
   }
