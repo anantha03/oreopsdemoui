@@ -1,8 +1,8 @@
 <div class="main">
 <form [formGroup]="fileUploadForm">
-    <div class="form-group">
+     <div class="form-group">
         <br><input formControlName="file"  type="file" (change)="onFileChange($event)">
-      </div>
+      </div> 
       <br><button  class="btn btn-primary" type="submit" (click)="onSubmit()"> 
       Upload</button>
 </form>    

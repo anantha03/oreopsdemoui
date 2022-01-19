@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
   onResponse(response: any) {
     console.log(response)
    
-    if (response.statusData == "success") {
+    if (response.StatusData == "success") {
       this.router.navigateByUrl("/landing-page")
    
       this.service.loginBool = false;

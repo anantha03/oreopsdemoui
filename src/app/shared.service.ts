@@ -7,13 +7,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SharedService {
-//readonly APIUrl ="http://golang-backend-service.golang-backend/api/apps/v1/api"; 
-//docker build -t ananthayyaswamy03/angular-new-proxy:v6 .
-//readonly APIUrl = "http://20.62.223.168:3000/api"
-readonly APIUrl = "http://52.224.151.240:3000/api"
+
+
+readonly APIUrl = "http://20.81.26.76:3000/api"
 
 //readonly APIUrl = "http://localhost:3000/api"
-//\http://40.76.156.191:3000/api
+
 loginBool: boolean = false;
   registerBool: boolean = false;
   landingPageBool: boolean = false;
