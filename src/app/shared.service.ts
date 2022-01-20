@@ -1,15 +1,21 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
-export class SharedService {
+export class SharedService implements OnInit{
+Backend_IP="";
+  ngOnInit(): void {
+      this.Backend_IP=environment.Backend_IP;
+  }
 
+//readonly APIUrl = "http://20.81.26.76:3000/api"
 
-readonly APIUrl = "http://20.81.26.76:3000/api"
+ readonly APIUrl = "http://20.72.156.143:3000/api"
 
 //readonly APIUrl = "http://localhost:3000/api"
 
