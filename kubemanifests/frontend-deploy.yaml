@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend-deploy
-  namespace: gitlab-kubernetes-agent
+  namespace: gitlab-kubernetes-agent:gitlab-agent
 spec:
   selector:
     matchLabels:
