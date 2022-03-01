@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend-deploy
-  namespace: gitlab-kubernetes-agent:gitlab-agent
+  namespace: gitlab-kubernetes-agent
 spec:
   selector:
     matchLabels:
@@ -29,5 +29,5 @@ spec:
             preStop:
               exec:
                 command: ["/usr/sbin/nginx","-s","quit"]
-      imagePullSecrets:
-        - name: acrdemo2ss-secret
+      # imagePullSecrets:
+      #   - name: acrdemo2ss-secret
