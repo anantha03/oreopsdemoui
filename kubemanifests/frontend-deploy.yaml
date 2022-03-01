@@ -28,5 +28,5 @@ spec:
             preStop:
               exec:
                 command: ["/usr/sbin/nginx","-s","quit"]
-      # imagePullSecrets:
-      #   - name: acrdemo2ss-secret
+      imagePullSecrets:
+        - name: acrdemo2ss-secret
