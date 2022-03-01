@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  Backend_IP: ""
+  Backend_IP: "ji"
 };
 
 /*

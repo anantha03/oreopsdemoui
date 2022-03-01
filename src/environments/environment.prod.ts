@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  Backend_IP: ""
+  Backend_IP: $ENV.Backend_IP
 };

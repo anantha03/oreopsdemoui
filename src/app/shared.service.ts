@@ -13,11 +13,11 @@ Backend_IP="";
       this.Backend_IP=environment.Backend_IP;
   }
 
-//readonly APIUrl = "http://20.81.26.76:3000/api"
+//readonly APIUrl = "http://40.74.177.35:3000/api"
 
- readonly APIUrl = "http://20.72.156.143:3000/api"
+// readonly APIUrl = this.Backend_IPhttp://40.74.177.35/
 
-//readonly APIUrl = "http://localhost:3000/api"
+readonly APIUrl = "http://localhost:3000/api"//40.74.177.35
 
 loginBool: boolean = false;
   registerBool: boolean = false;
@@ -28,9 +28,11 @@ loginBool: boolean = false;
   constructor(private http:HttpClient) { }
 
   getTitle():Observable<any>{
+    console.log("api url=",this.APIUrl)
     return this.http.get<any>(this.APIUrl+'/title');
   }
 signUp(userData:any):Observable<any>{
+  console.log(userData)
   return this.http.post<any>(this.APIUrl+'/sign-up',userData);
 }
 login(userData: any): Observable<any> {

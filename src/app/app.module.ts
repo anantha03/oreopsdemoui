@@ -9,7 +9,7 @@ import { SharedService } from './shared.service';
 import {HttpClientModule} from '@angular/common/http';
 import { AlertModalComponent } from './alert-modal/alert-modal.component';
 import { FileUploadComponent } from './landing-page/file-upload/file-upload.component'
-
+import { CookieService } from 'ngx-cookie-service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,10 +22,10 @@ import { FileUploadComponent } from './landing-page/file-upload/file-upload.comp
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule,
+    HttpClientModule
     
   ],
-  providers: [SharedService],
+  providers: [SharedService,CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

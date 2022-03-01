@@ -13,6 +13,7 @@ export class FileUploadComponent implements OnInit {
   fileUploadForm = this.fb.group({
     
     file: [{ value: '',  }, Validators.required]
+    
   })
   ngOnInit(): void {
   }

@@ -5,7 +5,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { SharedService } from '../shared.service';
 import { Router } from '@angular/router';
 import { AppComponent } from '../app.component';
-
+import { CookieService } from 'ngx-cookie-service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -42,6 +42,7 @@ export class LoginComponent implements OnInit {
       else {
         this.service.checkAdmin = false;
       }
+      this.cookie.set("token",response.Token);
       this.router.navigateByUrl("/landing-page")
     }
     else {
@@ -49,7 +50,7 @@ export class LoginComponent implements OnInit {
     }
 
   }
-  constructor(private fb: FormBuilder, public service: SharedService, private router: Router) { }
+  constructor(private fb: FormBuilder, public service: SharedService, private router: Router,private cookie: CookieService) { }
   loginForm = this.fb.group({
     userName: ['', Validators.required],
     password: ['', Validators.required]
