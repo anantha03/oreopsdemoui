@@ -20,9 +20,7 @@ spec:
         - name: frontend-deploy
           image: aksacroreops.azurecr.io/oreopsdemoui:latest
           ports:
-            - containerPort: 80
-      imagePullSecrets:
-        - name: acrdemo2ss-secret 
+            - containerPort: 80 
           env:
            - name: Backend_IP
              value: "http://20.81.50.36:3000/api" 
@@ -30,3 +28,5 @@ spec:
             preStop:
               exec:
                 command: ["/usr/sbin/nginx","-s","quit"]
+      imagePullSecrets:
+        - name: acrdemo2ss-secret
