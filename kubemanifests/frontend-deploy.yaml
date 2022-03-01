@@ -18,9 +18,11 @@ spec:
     spec:
       containers:
         - name: frontend-deploy
-          image: ananthayyaswamy03/tokenfrontend:v1
+          image: aksacroreops.azurecr.io/oreopsdemoui:latest
           ports:
             - containerPort: 80
+      imagePullSecrets:
+        - name: acrdemo2ss-secret 
           env:
            - name: Backend_IP
              value: "http://20.81.50.36:3000/api" 
