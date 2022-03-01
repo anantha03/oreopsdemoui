@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: frontend-deploy
-          image: ananthayyaswamy03/goproject:v1
+          image: aksacroreops.azurecr.io/oreopsdemoui:latest
           ports:
             - containerPort: 80
           env:
