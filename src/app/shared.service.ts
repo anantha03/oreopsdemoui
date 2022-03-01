@@ -17,7 +17,7 @@ Backend_IP="";
 
 // readonly APIUrl = this.Backend_IPhttp://40.74.177.35/
 
-readonly APIUrl = "http://localhost:3000/api"//40.74.177.35
+readonly APIUrl = "http://20.204.235.206:3000/api"//40.74.177.35
 
 loginBool: boolean = false;
   registerBool: boolean = false;
