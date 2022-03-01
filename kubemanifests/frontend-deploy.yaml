@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend-deploy
+  namespace: gitlab-kubernetes-agent
 spec:
   selector:
     matchLabels:
@@ -20,10 +21,10 @@ spec:
         - name: frontend-deploy
           image: aksacroreops.azurecr.io/oreopsdemoui:latest
           ports:
-            - containerPort: 80 
+            - containerPort: 80
           env:
            - name: Backend_IP
-             value: "http://20.81.50.36:3000/api" 
+             value: "http://20.81.50.36:3000/api"
           lifecycle:
             preStop:
               exec:
