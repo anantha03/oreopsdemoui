@@ -24,10 +24,10 @@ spec:
             - containerPort: 80
           env:
            - name: Backend_IP
-             value: "http://20.81.50.36:3000/apii"
+             value: "http://20.81.50.36:3000/api"
           lifecycle:
             preStop:
               exec:
                 command: ["/usr/sbin/nginx","-s","quit"]
-      imagePullSecrets:
-        - name: acrdemo2ss-secret
+      # imagePullSecrets:
+      #   - name: acrdemo2ss-secret
