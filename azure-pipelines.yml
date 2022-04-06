@@ -16,7 +16,7 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    cd '$(System.DefaultWorkingDirectory)/oreopsdemoui'
+    #cd '$(System.DefaultWorkingDirectory)/oreopsdemoui'
     npm install -g @angular/cli
     npm install
     npm audit fix
